@@ -11,7 +11,8 @@ public class userSaveData { //date,rating,notes
 	private String outputText;
 
 	public void saveUserData(userData segment) {
-		segment.getDate();
+		int segDate = segment.getDate()-1;
+		dataArray[segDate]=segment;
 
 		for (int i=0; i< dataArray.length; i++) {
 			String outputText = dataArray[i].getRating() + "|" + dataArray[i].getNotes() + "|" + dataArray[i].getDate();
@@ -26,6 +27,8 @@ public class userSaveData { //date,rating,notes
 		FileWriter fw - new FileWriter(file1);
 
 		PrintWriter pw = new PrintWriter(fw);
+
+		pw.println(text)
 
 		pw.close();
 	}
