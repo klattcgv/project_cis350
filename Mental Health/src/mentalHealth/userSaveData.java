@@ -8,12 +8,20 @@ import java.io.PrintWriter;
 /**
  * userSaveData is a back-end class tasked to save userData objects to an array which is then stored on a text file.
  * 
- * @author clayk
+ * @author clayL and tylerR
+ * @version 1.1
  *
  */
 public class userSaveData {
 	
+	/**
+	 * The array which data is stored in.
+	 */
 	private userData [] dataArray = new userData[365];
+	
+	/**
+	 * The array in String form which is stored into a text file.
+	 */
 	private static String outputText;
 	
 	/**
@@ -33,7 +41,7 @@ public class userSaveData {
 	/**
 	 * saveToFile takes the string generated from the array and saves it to a text file.
 	 * 
-	 * @throws IOException
+	 * @throws IOException In case of IO failure.
 	 */
 	public static void saveToFile() throws IOException {
 		saveFile("dataList.txt", outputText, true);
@@ -44,7 +52,7 @@ public class userSaveData {
 	 * 
 	 * @param name The name of the file.
 	 * @param text The string that will be saved.
-	 * @param append 
+	 * @param append Appends data.
 	 * @throws IOException Thrown when improperly used.
 	 */
 	public static void saveFile(String name, String text, boolean append) throws IOException{
