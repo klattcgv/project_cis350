@@ -34,15 +34,19 @@ public class userSaveData {
 		dataArray[segDate]=segment;
 
 		for (int i=0; i< dataArray.length; i++) {
+			if(dataArray[i] != null) {
 			outputText = dataArray[i].getRating() + "|" + dataArray[i].getNotes() + "|" + dataArray[i].getDate();
+			}
 		}		
 
 	}
+	
 	/**
 	 * saveToFile takes the string generated from the array and saves it to a text file.
 	 * 
 	 * @throws IOException In case of IO failure.
 	 */
+	
 	public static void saveToFile() throws IOException {
 		saveFile("dataList.txt", outputText, true);
 	}
@@ -55,10 +59,11 @@ public class userSaveData {
 	 * @param append Appends data.
 	 * @throws IOException Thrown when improperly used.
 	 */
+	
 	public static void saveFile(String name, String text, boolean append) throws IOException{
-		File file1 = new File("save.txt");
+		File file1 = new File(name);
 
-		FileWriter fw = new FileWriter(file1);
+		FileWriter fw = new FileWriter(file1, append);
 
 		PrintWriter pw = new PrintWriter(fw);
 
