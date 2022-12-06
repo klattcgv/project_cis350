@@ -30,9 +30,11 @@ public class backEndTest {
 		userSaveData.saveToFile();
 		
 		test.saveUserData(u2);
+		
 		userSaveData.saveToFile();
 
 		test.saveUserData(u3);
+		
 		userSaveData.saveToFile();
 
 		test.saveUserData(u4);
@@ -43,12 +45,12 @@ public class backEndTest {
 	public void loadTest() throws FileNotFoundException {
 		ArrayList<userData> storedList = new ArrayList<userData>(userLoadData.readFile("dataList.txt"));
 		int test = storedList.get(0).getDate();
-		//String test2 = storedList.get(3).getNotes();
-		//int test3 = storedList.get(2).getRating();
+		String test2 = storedList.get(3).getNotes();
+		int test3 = storedList.get(2).getRating();
 		
 		System.out.println(test);
-		//System.out.println(test2);
-		//System.out.println(test3);
+		System.out.println(test2);
+		System.out.println(test3);
 
 	}
 }
