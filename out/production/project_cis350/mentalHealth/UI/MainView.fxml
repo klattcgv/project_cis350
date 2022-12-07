@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+
+<BorderPane prefHeight="479.0" prefWidth="857.0" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="mentalHealth.UI.UIController">
+   <left>
+      <HBox prefHeight="439.0" prefWidth="200.0" BorderPane.alignment="CENTER">
+         <children>
+            <VBox prefHeight="279.0" prefWidth="200.0">
+               <children>
+                  <VBox prefHeight="100.0" prefWidth="210.0" />
+                  <VBox prefHeight="374.0" prefWidth="180.0">
+                     <children>
+                        <Button mnemonicParsing="false" onAction="#getDashBoard" prefHeight="50.0" prefWidth="200.0" text="Dashboard" />
+                        <Button mnemonicParsing="false" onAction="#getTask" prefHeight="50.0" prefWidth="200.0" text="My task" />
+                        <Button mnemonicParsing="false" onAction="#getCalendar" prefHeight="50.0" prefWidth="200.0" text="Calendar" />
+                        <Button mnemonicParsing="false" onAction="#getEntries" prefHeight="50.0" prefWidth="200.0" text="New entries" />
+                        <Button mnemonicParsing="false" onAction="#getStat" prefHeight="56.0" prefWidth="200.0" text="Stat" />
+                     </children>
+                  </VBox>
+                  <VBox prefHeight="79.0" prefWidth="200.0" />
+               </children>
+            </VBox>
+         </children>
+      </HBox>
+   </left>
+</BorderPane>
