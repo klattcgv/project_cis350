@@ -8,7 +8,7 @@ import java.util.Scanner;
 /**
  * userLoadData is tasked with reading data from a text file, storing that data into userData objects which are then stored into an array.
  * 
- * @author clayk
+ * @author clayk & tylerR
  * @version 1
  */
 
@@ -36,9 +36,11 @@ public class userLoadData {
 			
 			int rating = Integer.parseInt(items[0]);
 			String notes = items[1];
-			int date = Integer.parseInt(items[2]);
+			int day = Integer.parseInt(items[2]);
+			int month = Integer.parseInt(items[3]);
+			String date = (items[4]);
 			
-			userData newSegment = new userData(rating,notes,date);
+			userData newSegment = new userData(rating,notes,day,month,date);
 			
 			storedList.add(newSegment);
 		}

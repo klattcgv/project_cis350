@@ -30,12 +30,12 @@ public class userSaveData {
 	 * @param segment userData segment to be inserted into the array.
 	 */
 	public void saveUserData(userData segment) {
-		int segDate = segment.getDate()-1;
+		int segDate = segment.getDay();
 		dataArray[segDate]=segment;
 
 		for (int i=0; i< dataArray.length; i++) {
 			if(dataArray[i] != null) {
-			outputText = dataArray[i].getRating() + "|" + dataArray[i].getNotes() + "|" + dataArray[i].getDate();
+			outputText = dataArray[i].getRating() + "|" + dataArray[i].getNotes() + "|" + dataArray[i].getDay() + "|" + dataArray[i].getMonth() + "|" + dataArray[i].getLocaldate();
 			}
 		}		
 

@@ -13,7 +13,7 @@ public class userData {
 	/**
 	 * The day of the year.
 	 */
-	private int date;
+	private int day;
 	
 	/**
 	 * Comments for the day.
@@ -25,37 +25,59 @@ public class userData {
 	 */
 	private int rating;
 	
+	private int month;
+	
+	private String localdate;
+	
 	/**
 	 * userData constructs a new userData object.
 	 * 
 	 * @param rating The rating the user gives to the day which is a value ranging from 1-10.
 	 * @param notes The notes are specific things that the user has about a given day.
-	 * @param date Currently a number 0-364 which defines the date.
+	 * @param day Currently a number 0-364 which defines the date.
 	 */
 	
-	public userData(int rating,String notes, int date) {	//Constructor for Data Entries
+	public userData(int rating,String notes, int day, int month, String localdate) {	//Constructor for Data Entries
 		super();
-		this.date = date;
+		this.day = day;
 		this.notes = notes;
 		this.rating = rating;
+		this.month = month;
+		this.localdate = localdate;
 	}
 	
 	/**
 	 * Returns the date.
 	 * @return
 	 */
-	public int getDate() { //Getters and Setters
-		return date;
+	public int getDay() { //Getters and Setters
+		return day;
 	}
 	
 	/**
 	 * Sets the date. 
 	 * @param date
 	 */
-	public void setDate(int date) {
-		this.date = date;
+	public void setDay(int date) {
+		this.day = date;
 	}
 	
+	public int getMonth() {
+		return month;
+	}
+
+	public void setMonth(int month) {
+		this.month = month;
+	}
+
+	public String getLocaldate() {
+		return localdate;
+	}
+
+	public void setLocaldate(String localdate) {
+		this.localdate = localdate;
+	}
+
 	/**
 	 * Returns the notes.
 	 * @return
@@ -87,5 +109,5 @@ public class userData {
 	public void setRating(int rating) {
 		this.rating = rating;
 	}
-	
+
 }

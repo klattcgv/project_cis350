@@ -3,7 +3,6 @@ package mentalHealth.UI;
 import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.net.URL;
-import java.time.LocalDate;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
 import javafx.scene.control.ChoiceBox;
@@ -23,8 +22,11 @@ public class EntriesUIController implements Initializable{
     private DatePicker myDate;
 
     @FXML
-    private ChoiceBox<String> myMood;
+    private ChoiceBox<String> monthList;
+    private String[] monthChoices = {"Jan","Feb","Mar","Apr","May","Jun","Jul","Aug","Sep","Oct","Nov","Dec"};
 
+    @FXML
+    private ChoiceBox<String> myMood;
     private String[] mood = {"1", "2", "3", "4", "5", "6", "7", "8", "9", "10"};
 
     @FXML
@@ -33,9 +35,12 @@ public class EntriesUIController implements Initializable{
     @FXML
     private void saveEntries() throws IOException {
         String notes = myDiary.getText();
-        LocalDate date = myDate.getValue();
+        String date = String.valueOf(myDate.getValue());
         int currentMood = Integer.parseInt(myMood.getValue());
-        userData u1 = new userData(currentMood,notes, 3);
+        String[] splitDate = date.split("-");
+        int day = Integer.parseInt(splitDate[2]);
+        int month = Integer.parseInt(splitDate[1]);
+        userData u1 = new userData(currentMood,notes,day,month,date);
 
         userSaveData test = new userSaveData();
 
