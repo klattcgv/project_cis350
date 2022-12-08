@@ -17,7 +17,7 @@ public class userSaveData {
 	/**
 	 * The array which data is stored in.
 	 */
-	private userData [] dataArray = new userData[365];
+	private userData [][] dataArray = new userData[12][31];
 	
 	/**
 	 * The array in String form which is stored into a text file.
@@ -30,12 +30,15 @@ public class userSaveData {
 	 * @param segment userData segment to be inserted into the array.
 	 */
 	public void saveUserData(userData segment) {
-		int segDate = segment.getDay();
-		dataArray[segDate]=segment;
+		int segDay = segment.getDay()-1;
+		int segMonth = segment.getMonth()-1;
+		dataArray[segMonth][segDay]=segment;
 
-		for (int i=0; i< dataArray.length; i++) {
-			if(dataArray[i] != null) {
-			outputText = dataArray[i].getRating() + "|" + dataArray[i].getNotes() + "|" + dataArray[i].getDay() + "|" + dataArray[i].getMonth() + "|" + dataArray[i].getLocaldate();
+		for (int i=0; i < dataArray.length; i++) {
+			for (int j=0; i < dataArray[0].length; j++) {
+				if(dataArray[i][j] != null) {
+					outputText = dataArray[i][j].getRating() + "|" + dataArray[i][j].getNotes() + "|" + dataArray[i][j].getDay() + "|" + dataArray[i][j].getMonth() + "|" + dataArray[i][j].getLocaldate();
+				}
 			}
 		}		
 
