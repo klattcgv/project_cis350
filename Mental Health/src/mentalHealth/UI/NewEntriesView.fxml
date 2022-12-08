@@ -1,12 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ChoiceBox?>
 <?import javafx.scene.control.DatePicker?>
 <?import javafx.scene.control.Label?>
 <?import javafx.scene.control.ListView?>
 <?import javafx.scene.control.SplitPane?>
 <?import javafx.scene.control.TextArea?>
-<?import javafx.scene.control.ToolBar?>
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.layout.BorderPane?>
 
@@ -20,23 +20,15 @@
                     <items>
                       <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="100.0" prefWidth="160.0">
                            <children>
-                              <DatePicker layoutX="-1.0" layoutY="85.0" prefHeight="26.0" prefWidth="294.0" />
+                              <DatePicker layoutX="-1.0" layoutY="85.0" onAction="#pickDate" prefHeight="26.0" prefWidth="294.0" />
                               <Label alignment="CENTER" layoutX="1.0" layoutY="14.0" prefHeight="17.0" prefWidth="293.0" text="Choose a date" textAlignment="CENTER" textOverrun="WORD_ELLIPSIS" />
-                              <Button layoutX="172.0" layoutY="136.0" mnemonicParsing="false" prefHeight="26.0" prefWidth="109.0" text="Save " />
+                              <Button layoutX="172.0" layoutY="136.0" mnemonicParsing="false" onAction="#saveEntries" prefHeight="26.0" prefWidth="109.0" text="Save " />
                            </children>
                         </AnchorPane>
                       <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="100.0" prefWidth="160.0">
                            <children>
                               <Label alignment="CENTER" contentDisplay="CENTER" layoutY="45.0" prefHeight="17.0" prefWidth="296.0" text="How  do you feel today?" textAlignment="CENTER" />
-                              <ToolBar layoutX="53.0" layoutY="78.0" prefHeight="40.0" prefWidth="191.0">
-                                 <items>
-                                    <Button mnemonicParsing="false" prefHeight="26.0" prefWidth="32.0" text=":&lt;" />
-                                    <Button alignment="CENTER" contentDisplay="CENTER" mnemonicParsing="false" nodeOrientation="LEFT_TO_RIGHT" prefHeight="26.0" prefWidth="32.0" text=":(" textAlignment="CENTER" />
-                                    <Button mnemonicParsing="false" prefHeight="26.0" prefWidth="32.0" text=":|" />
-                                    <Button mnemonicParsing="false" prefHeight="26.0" prefWidth="32.0" text=":)" />
-                                    <Button alignment="CENTER" mnemonicParsing="false" prefHeight="26.0" prefWidth="32.0" text=":&gt;" />
-                                 </items>
-                              </ToolBar>
+                              <ChoiceBox fx:id="myMood" layoutX="77.0" layoutY="85.0" prefHeight="26.0" prefWidth="142.0" />
                            </children>
                         </AnchorPane>
                     </items>
@@ -49,9 +41,8 @@
                     <items>
                       <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="161.0" prefWidth="197.0">
                            <children>
-                              <ListView layoutX="1.0" layoutY="41.0" prefHeight="158.0" prefWidth="207.0" />
+                              <ListView layoutX="1.0" layoutY="41.0" prefHeight="158.0" prefWidth="297.0" />
                               <Label alignment="CENTER" contentDisplay="CENTER" layoutX="65.0" layoutY="14.0" prefHeight="17.0" prefWidth="167.0" text="Daily task" />
-                              <Button layoutX="220.0" layoutY="41.0" mnemonicParsing="false" text="New task" />
                            </children>
                         </AnchorPane>
                       <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="162.0" prefWidth="158.0">
