@@ -29,31 +29,6 @@ public class EntriesUIController implements Initializable{
     }
 
     @FXML
-    private void getSuperSad() throws IOException {
-
-    }
-
-    @FXML
-    private void getSad() throws IOException {
-
-    }
-
-    @FXML
-    private void getNumb() throws IOException {
-
-    }
-
-    @FXML
-    private void getGood() throws IOException {
-
-    }
-
-    @FXML
-    private void getHappy() throws IOException {
-
-    }
-
-    @FXML
     private void pickDate() throws IOException {
 
     }
