@@ -11,7 +11,7 @@ package mentalHealth;
 public class userData {
 	
 	/**
-	 * The day of the year.
+	 * The day of the month.
 	 */
 	private int day;
 	
@@ -25,7 +25,15 @@ public class userData {
 	 */
 	private int rating;
 	
+	/**
+	 * The month of the year.
+	 */
+	
 	private int month;
+	
+	/**
+	 * The date as passed by the GUI. 
+	 */
 	
 	private String localdate;
 	
@@ -34,7 +42,9 @@ public class userData {
 	 * 
 	 * @param rating The rating the user gives to the day which is a value ranging from 1-10.
 	 * @param notes The notes are specific things that the user has about a given day.
-	 * @param day Currently a number 0-364 which defines the date.
+	 * @param day A number 0-30 which defines the day of the month.
+	 * @param month A number 0-11 which defines the month of the year.
+	 * @param localdate A string containing the day, month, and year.
 	 */
 	
 	public userData(int rating,String notes, int day, int month, String localdate) {	//Constructor for Data Entries
@@ -42,10 +52,12 @@ public class userData {
 		this.day = day;
 		this.notes = notes;
 		this.rating = rating;
+		this.month = month;
+		this.localdate = localdate;
 	}
 	
 	/**
-	 * Returns the date.
+	 * Returns the day.
 	 * @return
 	 */
 	public int getDay() { //Getters and Setters
@@ -53,25 +65,44 @@ public class userData {
 	}
 	
 	/**
-	 * Sets the date. 
-	 * @param date
+	 * Sets the day. 
+	 * @param day
 	 */
-	public void setDay(int date) {
-		this.day = date;
+	public void setDay(int day) {
+		this.day = day;
 	}
 	
+	/**
+	 * Returns the month
+	 * @return
+	 */
 	public int getMonth() {
 		return month;
 	}
+	
+	/**
+	 * Sets the month.
+	 * @param month
+	 */
 
 	public void setMonth(int month) {
 		this.month = month;
 	}
 
+	/**
+	 * Returns the local date.
+	 * @return
+	 */
+	
 	public String getLocaldate() {
 		return localdate;
 	}
 
+	/**
+	 * Sets the local date.
+	 * @param localdate
+	 */
+	
 	public void setLocaldate(String localdate) {
 		this.localdate = localdate;
 	}
@@ -107,5 +138,5 @@ public class userData {
 	public void setRating(int rating) {
 		this.rating = rating;
 	}
-	
+
 }
