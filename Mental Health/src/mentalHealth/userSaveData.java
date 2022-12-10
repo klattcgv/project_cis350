@@ -9,13 +9,13 @@ import java.io.PrintWriter;
  * userSaveData is a back-end class tasked to save userData objects to an array which is then stored on a text file.
  * 
  * @author clayL and tylerR
- * @version 1.1
+ * @version 1.2
  *
  */
 public class userSaveData {
 	
 	/**
-	 * The array which data is stored in.
+	 * The 2D array which data is stored in, with rows indicating months, and columns indicating days.
 	 */
 	private userData [][] dataArray = new userData[12][31];
 	
